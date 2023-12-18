@@ -370,7 +370,8 @@ static int PuissanceAlentourOuest (int[][] tableau, int ligne, int colonne){
 	sommeVoisinsO += Puissance(tableau, ligne+1, colonne-1);
 	sommeVoisinsO += Puissance(tableau, ligne+1, colonne);
 
-// To avoid going out of bounds, you should have a safety margin of 2 cells with respect to the column. If it's greater than 2, then you can calculate the total number of cells around it.  if (colonne >= 2) {
+// To avoid going out of bounds, you should have a safety margin of 2 cells with respect to the column. If it's greater than 2, then you can calculate the total number of cells around it.  
+if (colonne >= 2) {
   sommeVoisinsO += Puissance(tableau, ligne, colonne-2);
 	sommeVoisinsO += Puissance(tableau, ligne-1, colonne-2);
   sommeVoisinsO += Puissance(tableau, ligne+1, colonne-2);
@@ -421,7 +422,8 @@ static int Puissance (int[][] carte, int ligne, int colonne) {
     return feu;
 }
 
-//function changing the state of an object based on whether it should burn or not.static int actualisation(int[][] cartes, int ligne, int colonne, int choixVent) {
+//function changing the state of an object based on whether it should burn or not.
+static int actualisation(int[][] cartes, int ligne, int colonne, int choixVent) {
     int puissanceAutour = PuissanceAlentour(cartes, ligne, colonne, choixVent);
     int seuil = Inflammabilite (cartes, ligne, colonne);
     int var = cartes[ligne][colonne];
@@ -474,7 +476,8 @@ static int Arrosage (int[][] carte, int[][] newcarte, int ligne, int colonne, in
 }
 
 // Change the state of a cell after clearing it.
-// Check if there are enough points left and deduct a number of points corresponding to double the maximum firepower of that cell.static int Defrichage (int[][] carte, int[][] newcarte, int ligne, int colonne, int         pointPompier) {       
+// Check if there are enough points left and deduct a number of points corresponding to double the maximum firepower of that cell.
+static int Defrichage (int[][] carte, int[][] newcarte, int ligne, int colonne, int         pointPompier) {       
   if (carte[ligne][colonne] == 3 & pointPompier>=2) 
     {newcarte[ligne][colonne] = 0;
     pointPompier -= 2;}
