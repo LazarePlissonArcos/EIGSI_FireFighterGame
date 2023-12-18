@@ -10,7 +10,7 @@ Development of an automatic selection of firefighting operations, that select th
 
 Visualization of what is happening without firegher in the video named 
 "example_map3_without_firefighter"
-[Watch the video](/EIGSI_FireFighterGame/example_map3_without_firefighter.mp4)
+[Watch the video](/example_map3_without_firefighter.mp4)
 
 ## Features:
 Firefighter Number Selection: Choose the number of firefighters available in the simulation.
